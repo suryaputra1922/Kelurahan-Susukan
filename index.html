@@ -5,6 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pelayanan Digital Kelurahan Susukan</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Desain Tambahan untuk Fitur Panduan Pendatang */
+        .panduan-pendatang {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+        .kategori-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .btn-peta {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        .btn-peta:hover {
+            background-color: #0056b3;
+        }
+        .map-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,18 +58,36 @@
     </header>
 
     <main>
+        <!-- SEKSI LAYANAN MANDIRI -->
         <section class="layanan-list">
             <h2>Daftar Layanan Mandiri</h2>
             <ul>
-                <!-- GANTI URL DI BAWAH INI DENGAN LINK GOOGLE FORM DOMISILI ANDA -->
                 <li><strong>Surat Keterangan Domisili</strong> - <a href="LENGKAPI_LINK_GOOGLE_FORM_DOMISILI_DISINI" target="_blank">Ajukan via Google Form</a></li>
-                
-                <!-- GANTI URL DI BAWAH INI DENGAN LINK GOOGLE FORM SKTM ANDA -->
                 <li><strong>Surat Keterangan Tidak Mampu (SKTM)</strong> - <a href="LENGKAPI_LINK_GOOGLE_FORM_SKTM_DISINI" target="_blank">Ajukan via Google Form</a></li>
-                
-                <!-- GANTI URL DI BAWAH INI DENGAN NOMOR WHATSAPP (CONTOH: https://wa.me) -->
                 <li><strong>Surat Pengantar Kartu Keluarga (KK)</strong> - <a href="https://wa.me" target="_blank">Hubungi WhatsApp Pelayanan</a></li>
             </ul>
+        </section>
+
+        <!-- SEKSI BARU: PANDUAN LOKAL UNTUK PENDATANG & WARGA -->
+        <section class="panduan-pendatang">
+            <h2>Peta Kuliner & Fasilitas Wilayah Susukan</h2>
+            <p>Mencari kebutuhan mendesak atau kuliner di sekitar Susukan, Ungaran Timur? Klik tombol di bawah untuk melihat lokasi langsung di Google Maps beserta status buka/tutupnya:</p>
+            
+            <div class="kategori-buttons">
+                <a href="https://google.com" target="_blank" class="btn-peta">🍔 Cari Tempat Makan</a>
+                <a href="https://google.com" target="_blank" class="btn-peta">🔧 Cari Tambal Ban / Bengkel</a>
+                <a href="https://google.com" target="_blank" class="btn-peta">🏪 Cari Toko / Warung</a>
+            </div>
+
+            <!-- Peta Utama Wilayah -->
+            <div class="map-container">
+                <iframe 
+                    src="https://google.com" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
         </section>
     </main>
 
